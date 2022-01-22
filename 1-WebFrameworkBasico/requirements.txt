@@ -1,0 +1,6 @@
+robotframework==4.1.2
+robotframework-seleniumlibrary
+datetime
+dateutils
+robotframework-pabot
+allure-robotframework
