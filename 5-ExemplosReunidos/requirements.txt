@@ -10,3 +10,4 @@ robotframework-pabot
 allure-robotframework
 robotframework-kafkalibrary
 RESTinstance
+fordev
