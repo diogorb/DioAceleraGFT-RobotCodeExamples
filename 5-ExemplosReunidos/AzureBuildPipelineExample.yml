@@ -1,0 +1,38 @@
+# Variable 'python.version' was defined in the Variables tab
+# Multi-job configuration must be converted to matrix strategy: https://docs.microsoft.com/en-us/azure/devops/pipelines/process/phases?view=azure-devops&tabs=yaml#multi-job-configuration
+trigger:
+  branches:
+    include:
+    - refs/heads/main
+name: $(date:yyyyMMdd)$(rev:.r)
+jobs:
+- job: Phase_1
+  displayName: Build and Test
+  pool:
+    vmImage: ubuntu-16.04
+  steps:
+  - checkout: self
+  - task: UsePythonVersion@0
+    displayName: Use Python $(python.version)
+    inputs:
+      versionSpec: $(python.version)
+  - task: CmdLine@2
+    displayName: Install Robot and all dependencies
+    inputs:
+      script: python -m pip install --upgrade pip && pip install -r requirements.txt && pwd
+  - task: CmdLine@2
+    displayName: Flake8
+    continueOnError: True
+    enabled: False
+    inputs:
+      script: pip install flake8 && flake8
+  - task: CmdLine@2
+    displayName: Run Robot Tests
+    inputs:
+      script: python -m robot -x ./xunit/test-results.xml ./web/cadastro.robot
+  - task: PublishTestResults@2
+    displayName: Publish Test Results **/test-results.xml
+    inputs:
+      testResultsFiles: '**/test-results.xml'
+      testRunTitle: Python $(python.version)
+...
