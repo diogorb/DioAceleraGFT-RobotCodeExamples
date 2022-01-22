@@ -1,0 +1,20 @@
+0-WebDoZero
+Sem nada, começando sem framework, implementações do zero
+
+1-WebFrameworkLite
+Com alguma coisa, algum reuso, pabot... Allure...
+
+2-ApiMobileLite
+Demonstrações rapidas com API e Mobile
+
+3-RPA
+Demonstração com scripts prontos da Robocorp
+
+4-Kafka
+Exemplificar envio de mensagens no Kafka, validações, consultas, etc
+
+5-ExemplosReunidos
+Tudo junto e misturado
+
+6-Avançado
+Mais demonstrações do potencial do Robot e alguns recursos avançados

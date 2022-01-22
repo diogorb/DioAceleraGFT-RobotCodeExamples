@@ -1,0 +1,11 @@
+robotframework==4.1.2
+robotframework-seleniumlibrary
+datetime
+dateutils
+robotframework-requests
+robotframework-jsonlibrary
+robotframework-appiumlibrary
+robotframework-pabot
+allure-robotframework
+robotframework-kafkalibrary
+RESTinstance
