@@ -3,6 +3,7 @@
 Projeto desenvolvido com proposito de ser um modelo base para teste para interface WEB utilizando Python, RobotFramework e Selenium Library
 
 
+
 ## PRÉ-REQUISITOS
 
 Requisitos de software e hardware necessários para executar este projeto de automação
@@ -16,19 +17,20 @@ Requisitos de software e hardware necessários para executar este projeto de aut
     * Sugestão de tema e icones: Hyper Term Theme e Material Icon Theme
 
 
+
 ## ESTRUTURA DO PROJETO
 
-| Diretório \ Arquivo          	| Finalidade                                                                                |
-|------------------------------	|-------------------------------------------------------------------------------------------|
-| resources\ 		             | Pasta principal com estrutura básica                                                      |
-| resources\libs    		     | Local para salvamento das libs criadas para uso na automação                              |
-| resources\libs\examples | Local onde estão exemplos de usos de libs Standard e outras consideradas importantes, visando acelerar aprendizado e busca por exemplos para uso nas nossas automações |
-| resources\pages       | Local para salvamento dos PageObjects que serão usados na automação                       |
-| resources\base.robot     	 | Arquivo que une toda Stack de automação e deve ser herdado por todos os arquivos .robot usando a chave resource |
-| resources\keywords.robot 	 | Arquivo que contém Keywords de uso comum por toda Stack, por exemplo: Hooks de abrir sessão e fechar sessão |
-| web | Local onde devem ser criadas as suítes de testes (arquivos nome_suite.robot). Exemplo: login.robot |
-OBS: Recomenda-se que seja seguido o seguinte guia na escrita de casos de testes (https://github.com/robotframework/HowToWriteGoodTestCases/blob/master/HowToWriteGoodTestCases.rst)
+| Diretório \ Arquivo          	| Finalidade                                                                                                      |
+|------------------------------	|-------------------------------------------------------------------------------------------                      |
+| common\ 		                  | Pasta principal com estrutura básica                                                                            |
+| common\libs    		            | Local para salvamento das libs criadas para uso na automação                                                    |
+| common\libs\examples           | Local onde estão exemplos de usos de libs Standard e outras consideradas importantes, visando acelerar aprendizado e busca por exemplos de uso |
+| common\pages                   | Local para salvamento dos PageObjects que serão usados na automação                                             |
+| common\base.robot     	      | Arquivo que une toda Stack de automação e deve ser herdado por todos os arquivos .robot usando a chave resource |
+| common\keywords.robot 	      | Arquivo que contém Keywords de uso comum por toda Stack, por exemplo: Hooks de abrir sessão e fechar sessão     |
+| web | Local onde devem ser criadas as suítes de testes (arquivos nome_suite.robot). Exemplo: login.robot                                         |
 
+OBS: Recomenda-se que seja seguido o seguinte guia na escrita de casos de testes (https://github.com/robotframework/HowToWriteGoodTestCases/blob/master/HowToWriteGoodTestCases.rst)
 
 
 
@@ -38,19 +40,14 @@ Faça o download do template no repositório de código para utilizar no seu pro
 
 
 
-
 ## LIBRARIES UTILIZADAS
-
 Abaixo está a lista de frameworks utilizados nesse projeto
 
 * Selenium - Responsável pela interação com páginas web
-
 * FakerLibrary - Geracão de dados sintéticos
-
 * Pabot - Execução de testes em paralelo, gerando ganho de tempo de execução
-
 * allure-robotframework - Exportação do resultado dos testes no formato utilizado pelo Allure
-  
+
 
 
 ## COMANDO PARA EXECUTAR OS TESTES
@@ -70,7 +67,6 @@ Com o prompt de comando acesse a pasta do projeto, e execute o comando para exec
 
 * Executar testes em paralelo passando variável: pabot -d ./logs -v browser:headless tests/web
 
-  
 
 
 ## REPORTS E LOG DE EXECUÇÃO  
